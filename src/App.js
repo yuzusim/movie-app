@@ -19,8 +19,9 @@ class App extends React.Component {
         },
       },
     } = await axios.get(
-      "https://yts-proxy.nomadcoders1.now.sh/list_movies.json"
+      "https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by=rating"
     );
+    this.setState({ movies, isLoading: false });
     console.log(movies); // 데이터 확인
   };
 
