@@ -9,9 +9,19 @@ class App extends React.Component {
   };
   getMovies = async () => {
     // componentDidMount에서 data 를 fetch 하기
-    const movies = await axios.get(
+    // 중첩 구조분해
+    const {
+      data: {
+        // axios가 돌려주는 응답 객체의 data
+        data: {
+          // YTS API가 반환하는 실제 payload(data)
+          movies, // payload 안의 movies 배열만 추출
+        },
+      },
+    } = await axios.get(
       "https://yts-proxy.nomadcoders1.now.sh/list_movies.json"
     );
+    console.log(movies); // 데이터 확인
   };
 
   componentDidMount() {
