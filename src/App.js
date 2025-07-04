@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
+import Movie from "./Movie";
 
 class App extends React.Component {
   state = {
@@ -29,14 +30,31 @@ class App extends React.Component {
     // 6초 뒤에 isLoding을 false로 바꿔서 화면에 We are ready를 보이게 함
     // setTimeout(() => {
     //   this.setState({ isLoding: false });
-    // }, 6000);
+    // }, 6000); "We are ready"
 
     this.getMovies();
   }
 
   render() {
-    const { isLoading } = this.state;
-    return <div>{isLoading ? "Loading" : "We are ready"}</div>;
+    const { isLoading, movies } = this.state; // 여기서 movies 정의
+    return (
+      <div>
+        {isLoading
+          ? "Loading..."
+          : movies.map((movie) => {
+              return (
+                <Movie
+                  key={movie.id}
+                  id={movie.id}
+                  year={movie.year}
+                  title={movie.title}
+                  summary={movie.summary}
+                  poster={movie.medium_cover_image}
+                />
+              );
+            })}
+      </div>
+    );
   }
 }
 

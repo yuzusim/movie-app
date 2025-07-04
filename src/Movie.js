@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function movie() {
-  return <h1></h1>;
+// 매개변수 자리에서 곧바로 props를 구조분해(=인자로 받음)
+function movie({ id, year, title, summary, poster }) {
+  return <h2>{title}</h2>;
 }
 
 movie.PpopTypes = {
