@@ -8,7 +8,7 @@ function Movie({ id, year, title, summary, poster, genres }) {
   return (
     <Link
       to={{
-        pathname: "/movie-detail", // 이동할 경로
+        pathname: `/movie/${id}`, // id 값을 동적으로 넣어 URL 경로를 설정
         state: {
           // 함께 전달할 상태값
           year,
