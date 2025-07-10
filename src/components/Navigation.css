@@ -2,9 +2,10 @@
   _display: block;
   background-color: #ffffff;
   width: 100px;
-  height: 100px;
+  _height: 100px;
   padding: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
   position: absolute;
   top: 70px;
   left: 20px;

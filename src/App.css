@@ -5,7 +5,6 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #eff3f7;
   height: 100%;
-
   font-size: 16px;
 }
 
@@ -22,6 +21,8 @@ a,
 ul,
 li {
   list-style: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 html,

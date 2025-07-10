@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import axios from "axios";
 import Movie from "../components/Movie";
 import "./Home.css";
@@ -39,13 +38,13 @@ class Home extends React.Component {
   render() {
     const { isLoading, movies } = this.state; // 여기서 movies 정의
     return (
-      <section class="container">
+      <section className="container">
         {isLoading ? (
-          <div class="loader">
-            <span class="loader_text">Loading...</span>
+          <div className="loader">
+            <span className="loader_text">Loading...</span>
           </div>
         ) : (
-          <div class="movies">
+          <div className="movies">
             {movies.map((movie) => {
               return (
                 <Movie
