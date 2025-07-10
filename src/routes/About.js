@@ -1,6 +1,10 @@
 import React from "react";
 
 function About() {
-  return <span>About page</span>;
+  return (
+    <div className="about">
+      <span>About page</span>;
+    </div>
+  );
 }
 export default About;
